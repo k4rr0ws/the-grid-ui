@@ -6,6 +6,7 @@
     import { config, contracts } from '$lib/config'
     import { NotConnected } from '$lib/components'
     import { ethers } from 'ethers'
+    import IMG_CYBERLOCK from '$lib/assets/CryptoLock.jpg'
 
     let nfts = []
     let rewards
@@ -79,7 +80,9 @@
     <title>The Grid - CyberLock</title>
 </svelte:head>
 
-<div class="pixelFont text-xs md:text-sm bg-[#0e0f14] w-full rounded-lg p-6 md:p-12 mb-6 border-green-500 border">
+<div class="flex flex-row mb-6">
+<div class="bg-[#0e0f14] w-full rounded-lg p-6 md:mr-6">
+    <h2 class="pixelFont text-2xl mb-6">CyberLock Station</h2>
     <p>
         You approach the <strong>CyberLock</strong>, an imposing vault that represents
          the heart of The Grid's staking system. You place your NFT character on the pedestal, 
@@ -95,20 +98,23 @@
     </p>
 </div>
 
+<img src={IMG_CYBERLOCK} alt="CyberLock" class="mx-auto rounded-lg" />
+</div>
+
 {#if !$connected}
     <NotConnected />
 {:else}
 
 {#if rewards}
-<div class="pixelFont text-xs md:text-sm bg-[#0e0f14] rounded-lg p-12 mb-6">
-    <h2 class="text-xl mb-8">Earnings</h2>
+<div class="bg-[#0e0f14] rounded-lg p-12 mb-6">
+    <h2 class="pixelFont text-xl mb-8">Earnings</h2>
     <h3 class="text-2xl text-green-500">{rewards} $GRID</h3>
     <button on:click={onClaimClick} class="btn btn-primary text-xs bg-green-500 border-none hover:bg-pink-500 w-32 mt-6">Claim</button>
 </div>
 {/if}
 
-<div class="pixelFont text-xs md:text-sm bg-[#0e0f14] rounded-lg p-12">
-    <h2 class="text-xl mb-8">Staked</h2>
+<div class="bg-[#0e0f14] rounded-lg p-12">
+    <h2 class="pixelFont text-xl mb-8">Staked</h2>
     {#if staked.length > 1}
     <button on:click={() => onUnstakeClick(staked)} class="btn btn-secondary border-none bg-green-500 hover:bg-pink-600 mb-4" disabled={!approved}>Unstake All ({staked.length})</button>
     {/if}
@@ -128,8 +134,8 @@
     {/if}
 </div>
 
-<div class="pixelFont text-xs md:text-sm bg-[#0e0f14] rounded-lg p-12 mt-6">
-    <h2 class="text-xl mb-4">Inventory</h2>
+<div class="bg-[#0e0f14] rounded-lg p-12 mt-6">
+    <h2 class="pixelFont text-xl mb-4">Inventory</h2>
     {#if !approved}
     <button on:click={onApproveClick} class="btn btn-secondary border-none bg-green-500 hover:bg-pink-600 mb-4">Approve</button>
     {/if}

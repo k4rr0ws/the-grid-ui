@@ -11,8 +11,10 @@
         let owned = await walletOfOwner($signerAddress)
         if (owned) {
             nfts = owned
-            nfts = nfts
+        } else {
+            nfts = []
         }
+        nfts = nfts
     }
 
     onMount(() => {
@@ -26,11 +28,7 @@
     <title>The Grid - My Characters</title>
 </svelte:head>
 
-{#if !$connected}
-    <NotConnected />
-{/if}
-
-<div class="pixelFont text-xs md:text-sm bg-[#0e0f14] rounded-lg w-full p-12 mb-6 border-green-500 border">
+<div class="bg-[#0e0f14] rounded-lg w-full p-12 mb-6">
     <p>
         You access "My Characters" page, a virtual space that houses all of your unique NFT characters. 
         As you scroll through the list, you see the different characters you've generated, 
@@ -44,8 +42,11 @@
     </p>
 </div>
 
-<div class="pixelFont text-xs md:text-sm bg-[#0e0f14] rounded-lg p-12">
-    <h2 class="text-xl mb-8">My Characters</h2>
+{#if !$connected}
+    <NotConnected />
+{:else}
+<div class="bg-[#0e0f14] rounded-lg p-12">
+    <h2 class="pixelFont text-xl mb-8">My Characters</h2>
     {#if nfts.length > 0}
     <div class="grid grid-cols-1 md:grid-cols-5 gap-2">
         {#each nfts as nft}
@@ -61,3 +62,4 @@
     </div>
     {/if}
 </div>
+{/if}

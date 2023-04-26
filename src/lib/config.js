@@ -1,6 +1,7 @@
 import nftABI from '$lib/abi/NFT.json'
 import tokenABI from '$lib/abi/Token.json'
 import nftStakingABI from '$lib/abi/NFTStaking.json'
+import stakingRewardsABI from '$lib/abi/StakingRewards.json'
 
 export const config = {
     price: 0.05,
@@ -19,5 +20,9 @@ export const contracts = {
     nftStaking: {
         address: '0x7CD5a6269a2503070657854d70Bef09A680562fC',
         abi: nftStakingABI
+    },
+    stakingRewards: {
+        address: '0x6B5eEE0cA343130354fd10B687ab0DDD6e4e037d',
+        abi: stakingRewardsABI
     }
 }

@@ -23,8 +23,8 @@
 {/if}
 
 <div class="md:flex md:flex-cols">
-    <div class="pixelFont text-sm bg-[#0e0f14] rounded-lg mx-auto p-12 mb-4 md:mb-0 md:mr-4 border border-green-500 hover:border-pink-500">
-        <h2 class="text-xl mb-8">Mint</h2>
+    <div class="bg-[#0e0f14] rounded-lg mx-auto p-12 mb-4 md:mb-0 md:mr-4">
+        <h2 class="pixelFont text-xl mb-8">Mint</h2>
         <div class="form-control">
             <div class="input-group">
             <select class="select select-bordered" bind:value={amount}>
@@ -39,7 +39,7 @@
         <p class="mt-8 text-xs max-w-xs">Each NFT cost 1 AVAX, your character can be staked in CyberLock Staking and will passively generate GRID.</p>
     </div>
 
-    <div class="pixelFont text-xs md:text-sm bg-[#0e0f14] rounded-lg w-full p-12 md:flex-grow">
+    <div class="bg-[#0e0f14] rounded-lg w-full p-12 md:flex-grow">
         <p>
             Welcome to The Grid Creation Station, where you can generate your own NFT and take your place in this mindless society. The Grid algorithm selects the most fitting attributes for your character, creating a unique NFT that represents your presence in The Grid.
         </p>
