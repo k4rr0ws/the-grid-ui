@@ -7,6 +7,7 @@
     import { NotConnected } from '$lib/components'
     import { ethers } from 'ethers'
     import { toFixedNoRounding } from '$lib/utils'
+    import IMG_LiquidityProvision from '$lib/assets/LiquidityProvision.jpg'
 
     let staked = 0
     let unstaked = 0
@@ -60,21 +61,24 @@
 <svelte:head>
     <title>The Grid - Liquidity Provision</title>
 </svelte:head>
+<div class="md:flex md:flex-row">
+    <div class="bg-[#0e0f14] w-full rounded-lg p-6 md:mr-6">
+        <h2 class="pixelFont text-2xl mb-6">Liquidity Provision</h2>
+        <p>
+            As you enter The Grid's Liquidity Provision centre, you're greeted with a bustling marketplace, 
+            filled with traders, investors, and curious onlookers. In the center of the room, you see a large, 
+            glowing pool of GRID currency.
+        </p>
+        <p class="mt-6">
+            You feel a sense of excitement and possibility as you approach the pool, 
+            knowing that by providing liquidity, you can earn GRID rewards and contribute to the growth of 
+            The Grid's ecosystem. You place your liquidity into the pool, and watch as the trading volume and liquidity depth of the GRID currency increase. 
+            You feel proud to be a part of this thriving community, where everyone benefits from each other's contributions. 
+        </p>
+    </div>
 
-<div class="bg-[#0e0f14] rounded-lg w-full p-6 mb-6">
-    <p>
-        As you enter The Grid's Liquidity Provision centre, you're greeted with a bustling marketplace, 
-        filled with traders, investors, and curious onlookers. In the center of the room, you see a large, 
-        glowing pool of GRID currency.
-    </p>
-    <p class="mt-6">
-        You feel a sense of excitement and possibility as you approach the pool, 
-        knowing that by providing liquidity, you can earn GRID rewards and contribute to the growth of 
-        The Grid's ecosystem. You place your liquidity into the pool, and watch as the trading volume and liquidity depth of the GRID currency increase. 
-        You feel proud to be a part of this thriving community, where everyone benefits from each other's contributions. 
-    </p>
+    <img src={IMG_LiquidityProvision} alt="Liquidity Provision" class="w-[420px]" />
 </div>
-
 <div class="bg-[#0e0f14] rounded-lg w-full p-4 mb-6">
     <div class="grid grid-cols-2 gap-4 mb-4">
         <div class="bg-neutral-800 p-4 rounded-lg flex flex-col shadow-md">

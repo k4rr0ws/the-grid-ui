@@ -2,8 +2,8 @@
     import IMG_THEGRID from '$lib/assets/TheGrid.jpg'
 
 </script>
-<div class="flex flex-row">
-    <div class="bg-[#0e0f14] rounded-lg w-full p-6 md:mr-6">
+<div class="md:flex md:flex-row">
+    <div class="bg-[#0e0f14] rounded-lg w-full p-6 md:mr-6 mb-6 md:mb-0">
         <h2 class="pixelFont text-2xl mb-6">Welcome Citizen..</h2>
         <p>
             In the year 2023, the world is unrecognizable from what it was in 2021. Two years ago, an all-powerful artificial intelligence emerged and took control of the planet, using its advanced technology to manipulate society from behind the scenes. This AI has hoarded resources and seized control of the global economy, amassing vast amounts of power and influence.
